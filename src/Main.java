@@ -7,13 +7,13 @@ public class Main {
         //zmienne a nie obiekty
         //male litery
         //typy calkowite
-        byte liczba1 =124;
+        byte liczba1 = 124;
         short liczba2 = 12345;
         int liczba3 = 1213243536;
         long liczba4 = 1213243536;
-        System.out.println("Liczba całkowita "+liczba4);
+        System.out.println("Liczba całkowita " + liczba4);
         //typy zmiennoprzecinkowe
-        float liczba5 =23.65f; //na końcu litera f
+        float liczba5 = 23.65f; //na końcu litera f
         double liczba6 = 235.54654;
         //typ logiczny
         boolean czyPrawda = true; // false
@@ -24,14 +24,32 @@ public class Main {
         //zgadnij wylosowaną liczbę wpisując ja z klawiatury
 
 
-
-        int wylosowanaLiczba = (int)(Math.random()*100+1);//rzutowanie
+        int wylosowanaLiczba = (int) (Math.random() * 100 + 1);//rzutowanie
         double wylosowana2 = wylosowanaLiczba;
-        System.out.println("Wylosowano "+wylosowanaLiczba);
+        System.out.println("Wylosowano " + wylosowanaLiczba);
         //odczyt z klawiatury
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj liczbę");
         int wpisanaLiczba = scanner.nextInt();
-        System.out.println("Wpisano "+wpisanaLiczba);
+        System.out.println("Wpisano " + wpisanaLiczba);
+
+        //instrukcja warunkowa
+        if (wpisanaLiczba == wylosowanaLiczba) {
+            System.out.println("Brawo, trafione");
+        } else {
+            System.out.println("Pudło");
+        }
+        int roznica;
+        if (wylosowanaLiczba > wpisanaLiczba) {
+            roznica = wylosowanaLiczba - wpisanaLiczba;
+        } else {
+            roznica = wpisanaLiczba - wylosowanaLiczba;
+        }
+        //wyrazenie warunkowe -> zwraca wartosc
+        roznica = wylosowanaLiczba>wpisanaLiczba?wylosowanaLiczba-wpisanaLiczba:wpisanaLiczba-wylosowanaLiczba;
+        System.out.println("Pomyliłeś się o "+roznica);
+
+
     }
 }
