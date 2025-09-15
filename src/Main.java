@@ -18,6 +18,12 @@ public class Main {
         //typ znakowy
         char znak = 'a';
 
+        //wylosuj liczbę z zakresu od 1 do 100
+        //zgadnij wylosowaną liczbę wpisując ja z klawiatury
 
+
+
+        int wylosowanaLiczba = (int)(Math.random()*100+1);//rzutowanie
+        double wylosowana2 = wylosowanaLiczba;
     }
 }
